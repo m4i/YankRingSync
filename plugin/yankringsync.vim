@@ -45,8 +45,9 @@ function! s:GetScriptID(path)
   redir => scriptnames
   silent scriptnames
   redir END
-  let paths   = resolve(a:path) . '\|' . simplify(a:path)
-  let pattern = '\zs\d\+\ze: \(' . escape(paths, '.') . '\)\n'
+  let paths = substitute(resolve(a:path), '^' . $HOME, '\\(&\\|~\\)', '') . '\|'
+        \   . substitute(simplify(a:path), '^' . $HOME, '\\(&\\|~\\)', '')
+  let pattern = '\zs\d\+\ze: \(' . escape(paths, '.~') . '\)\n'
   return matchstr(scriptnames, pattern) + 0
 endfunction
 
