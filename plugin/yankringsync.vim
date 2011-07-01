@@ -1,6 +1,6 @@
 " YankRingSync - Synchronize register with YankRing history before putting
-" Version: 0.0.1
-" Copyright 2010, ISHIHARA Masaki <http://m4i.jp/>
+" Version: 1.0.0
+" Copyright 2010-2011, ISHIHARA Masaki <https://github.com/m4i>
 " License: MIT license  {{{
 "     Permission is hereby granted, free of charge, to any person obtaining
 "     a copy of this software and associated documentation files (the
